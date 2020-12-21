@@ -15,7 +15,7 @@ from selenium.webdriver.common.keys import Keys
 user_id = '学号'
 password = '校园门户密码'
 
-browser = webdriver.Chrome(executable_path='chromedriver的路径')
+browser = webdriver.Chrome(executable_path='driver/chromedriver.exe')
 browser.maximize_window()
 
 '''登录'''
@@ -42,9 +42,10 @@ for _ in range(15):
 time.sleep(0.5)
 
 '''从左边开始点击，如果被占，点击没有反应，继续向右点击，在弹出窗口中确认'''
-ActionChains(browser).move_by_offset(235, 175).click().perform()
-for _ in range(16):
-    ActionChains(browser).move_by_offset(45, 0).click().perform()
+'''click()可以换成context_click()，用右键确认点击位置'''
+ActionChains(browser).move_by_offset(275, 275).click().perform()
+for _ in range(9):
+    ActionChains(browser).move_by_offset(85, 0).click().perform()
     time.sleep(0.2)
     confirm_button = browser.find_element_by_id('btn_submit_addorder')
     # cancel_button = browser.find_element_by_id('btn_reset')

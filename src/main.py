@@ -144,7 +144,7 @@ if __name__ == '__main__':
     email_n = 'xxxx@163.com'
 
     # 输入需要的图书馆和座位候选座位
-    wanted_seats = [1, 2, 3, 4]
+    wanted_seats = [001, 002, 003, 004] # 请输入三位的座位号（不足请用0补齐）
     library_name = '伯川' # 请输入伯川或令希
     reading_room = 301 # 请预先在系统上确定要指定的阅览室
 
